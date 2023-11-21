@@ -8,34 +8,27 @@
 ## different branches/cases.
 
 
-# def get_dictionary_value(options, option):
-#     """
-#     get_dictionary_value() takes an dict (options) and a string (option).
-#     The functions check if the dictionary is empty and if yes,
-#     returns -1. If the dictionary is not empty, the function
-#     checks if the option is in the dictionary and if yes,
-#     returns the value associated with the option. If the option is not
-#     in the dictionary, the function returns the options available separated by comma and space.
-#     For example: If the dictionary is {'a': 1, 'b': 2, 'c': 3} and the option is 'b',
-#     the function returns 2. If the option is 'd', the function returns
-#     'The available options are - a, b, c'. If the fuction is called with an empty dictionary,
-#     the function returns -1. Make sure to have different assert statements to test the function
-#     than the ones provided above. Note: Please refer to Zybooks 7.10 for more information on dictionaries.
-#     """
-#     if len(options) == 0:
-#         return -1
-#     elif option in options:
-#         return options[option]
-#     else:
-#         return_str = "The available options are - "
-#         for key in options:
-#             return_str += key + ', '
-#         return return_str[:-2]
+def reverse_list(data):
+    """
+    get_dictionary_value() takes an list (data).
+    The functions check if the list is empty and if yes,
+    returns -1. If the list is not empty, the function
+    returns the list in reverse order.
+    For example: If the list is ['ax', 'by', 'cz'], then the answer is ['cz', 'by', 'ax'],
+    and if the list is of even size also, its reversed properly. If the fuction is called with an empty list,
+    the function returns -1. Make sure to have different assert statements to test the function
+    than the ones provided above and test it with both even and odd sized lists. Note: Please refer to Zybooks CA 8.1.1 for more information on dictionaries.
+    """
+    if len(data) == 0:
+        return -1
+    else:
+        for i in range(len(data)//2):
+            data[i], data[len(data)-i-1] = data[len(data)-i-1], data[i]
+        return data
 
 if __name__ == "__main__":
     ### Write 3 assert statements
     ### to test the function
-    # assert get_dictionary_value({}, 'a') == -1
-    # assert get_dictionary_value({'a': 1, 'b': 2, 'c': 3}, 'b') == 2
-    # assert get_dictionary_value({'a': 1, 'b': 2, 'c': 3}, 'd') == 'The available options are - a, b, c'
-    pass
+    assert reverse_list([]) == -1
+    assert reverse_list(['a', 'b', 'c']) == ['c', 'b', 'a']
+    assert reverse_list(['ax', 'by', 'cz', 'df']) == ['df', 'cz', 'by', 'ax']
