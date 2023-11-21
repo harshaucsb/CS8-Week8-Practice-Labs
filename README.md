@@ -23,11 +23,11 @@
 - Make sure it has different brances and possible return values
 - Add this function in "tests/correct.py" and add your assert statements there
 - Make sure to run correct.py file to see if your code is working correctly
-- Refer to "get_dictionary_value" for any queries
+- Refer to "reverse_list" for any queries
 
 ## Step 2
 
-- Create a test file under "tests" directory similar to "test_dictionary_values.py" file
+- Create a test file under "tests" directory similar to "test_reverse_list.py" file
 - You can copy paste the code from it and update the params and all TODO sections
 
 ## Step 3

@@ -34,7 +34,7 @@ num_pts_version_check = 0
 current_fun_names = []
 
 fun_names_dict = {
-    
+    "reverse_list": "reverse_list",
 }
 
 required_files = ['main.py', 'functions.py', 'tests.py'] # TODO: add ALL required files
@@ -58,6 +58,7 @@ test_files = ['__init__.py', 'requirements.txt', 'run_autograder',
               "submission examples",
               "test_A_files.py",
               "test_B_fun_names.py",
+              "test_reverse_list.py",
               ]
 # TODO: update the above depending on the names of the test files.
 ################################
