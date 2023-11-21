@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Set up autograder files
+touch /autograder/submission/delete_this_file.py  # needed in case a student doesn't upload a .py
+cp /autograder/submission/*.py /autograder/source/
+rm /autograder/source/delete_this_file.py
+
+cd /autograder/source
+
+python3 run_tests.py
