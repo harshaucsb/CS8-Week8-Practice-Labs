@@ -26,9 +26,30 @@ def reverse_list(data):
             data[i], data[len(data)-i-1] = data[len(data)-i-1], data[i]
         return data
 
+def slice_both_ends(word): # Based off of 8.7
+    """
+    slice_both_ends() takes a string.
+    The function checks if the string is empty and if yes,
+    returns -1. If the string is not empty, the function
+    returns a slice of the string with the first and last quarter
+    of the string removed.
+    For example: If the string is 'Tortilla' then the function returns
+    'rtil'. 
+    """
+    # STUB
+    if len(word) == 0:
+        return -1
+    return word[int(len(word)/4):int(3*len(word)/4)]
+
 if __name__ == "__main__":
     ### Write 3 assert statements
     ### to test the function
     assert reverse_list([]) == -1
     assert reverse_list(['a', 'b', 'c']) == ['c', 'b', 'a']
     assert reverse_list(['ax', 'by', 'cz', 'df']) == ['df', 'cz', 'by', 'ax']
+
+    # Test slice_both_ends()
+    assert slice_both_ends("") == -1
+    assert slice_both_ends("Tortilla") == "rtil"
+    assert slice_both_ends("Pomegranate") == "megran"
+    assert slice_both_ends("cat") == "ca"
