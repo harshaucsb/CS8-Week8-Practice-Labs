@@ -223,7 +223,28 @@ def username(s):
 
     return res    
 
+def extract_domain(email_address):
+    """
+    Extract the domain from an email address.
 
+    Example:
+    >>> extract_domain('wanda@hotmail.com')
+    'hotmail.com'
+    >>> extract_domain('john@gmail.com')
+    'gmail.com'
+
+    If the input is not of type string, then return -1.
+    If the input is not a valid email address (e.g. "wanda") return 
+    an empty string.
+    """
+    if type(email_address) != str:
+        return -1
+    
+    parts = email_address.split("@")
+    if len(parts) != 2:
+        return ""
+    else:
+        return parts[1]
 
 if __name__ == "__main__":
     ### Write 3 assert statements
@@ -303,6 +324,14 @@ if __name__ == "__main__":
     assert determine_class_status([0]) == "Student failed the class"
     assert determine_class_status([90]) == "Student passed the class with honors"
     assert determine_class_status([]) == "Student failed the class"
+
+    # Test extract_domain(..)
+    assert extract_domain("wanda@hotmail.com") == "hotmail.com"
+    assert extract_domain("wanda_245@hotmail.com") == "hotmail.com"
+    assert extract_domain("wanda") == ""
+    assert extract_domain("") == ""
+    assert extract_domain(1) == -1
+    # assert extract_domain("wanda@hotmail.com@invalid") == ""
 
     print('all asserts passed!')
 
