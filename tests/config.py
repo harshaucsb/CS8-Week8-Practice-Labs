@@ -35,6 +35,14 @@ current_fun_names = []
 
 fun_names_dict = {
     "reverse_list": "reverse_list",
+    "username": "username",
+    "family_relations": "family_relations",
+    "calculate_power_sum": "calculate_power_sum",
+    "calculate_list_statistics": "calculate_list_statistics",
+    "replace_string": "replace_string",
+    "format_table_row": "format_table_row",
+    "slice_both_ends": "slice_both_ends",
+    "determine_class_status": "determine_class_status",
 }
 
 required_files = ['main.py', 'functions.py', 'tests.py'] # TODO: add ALL required files

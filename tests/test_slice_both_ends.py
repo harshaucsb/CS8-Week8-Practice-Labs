@@ -2,23 +2,23 @@ import unittest
 from gradescope_utils.autograder_utils.decorators import visibility, partial_credit
 from BaseClass import BaseClass
 
-# TODO: create test parameters
+# DONE: create test parameters
 test_params = [
-    ([]),
-    (['a', 'b', 'c']),
-    (['ax', 'by', 'cz', 'df']),
+    (""),
+    ("Tortilla"),
+    ("University of California, Santa Barbara"),
 ]
 
 max_score = len(test_params)
 
-function_name = "reverse_list" # TODO
+function_name = "slice_both_ends" # DONE
 
-# TODO:  name the class according to the function name being tested
-class ReverseList_Test(BaseClass):
+# DONE:  name the class according to the function name being tested
+class SliceBothEnds_Test(BaseClass):
     @partial_credit(max_score)
     @visibility('visible')
     def test1(self, set_score=None):
-        """reverse_list(data)""" # TODO
+        """slice_both_ends(word)""" # DONE
 
         student_module = self.student_functions
         total_score = max_score
