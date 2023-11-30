@@ -4,10 +4,10 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ({"base": 1, "exp1": 1, "exp2": 2, "exp3": 3.5, "exp4": 4}, -1),
-    ({"base": 2, "exp1": 1, "exp2": 1, "exp3": 1}, 22),
-    ({"base": 2, "exp1": 1, "exp2": 1, "exp3": 1, "exp4": 1}, 8),
-    ({"base": 2}, 30),
+    (1, 1, 2, 3.5, 4),
+    (2, 1, 1, 1),
+    (2, 1, 1, 1, 1),
+    (2),
 ]
 
 max_score = len(test_params)

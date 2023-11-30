@@ -4,9 +4,9 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ('', -1),
-    ('Invalid string', "Nothing to replace"),
-    ('I want to TTYL today.', 'I want to talk to you later today.'),
+    (''),
+    ('Invalid string'),
+    ('I want to TTYL today.'),
 ]
 
 max_score = len(test_params)

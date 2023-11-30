@@ -4,10 +4,10 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ("", ""),
-    ("9876ZyWx%$#@", "9876zywx____"),
-    ("$#@", "___"),
-    ('_AbD_', "_abd_"),
+    (""),
+    ("9876ZyWx%$#@"),
+    ("$#@"),
+    ('_AbD_'),
 ]
 
 max_score = len(test_params)

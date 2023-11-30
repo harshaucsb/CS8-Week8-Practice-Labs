@@ -4,13 +4,13 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ([0, 90, 80, 70], "Student failed the class"),
-    ([75, 75, 75, 75], "Student failed the class"),
-    ([80, 80, 90, 70],"Student passed the class"),
-    ([90, 90, 90, 90], "Student passed the class with honors"),
-    ([0], "Student failed the class"),
-    ([90], "Student passed the class with honors"),
-    ([],  "Student failed the class"),
+    ([0, 90, 80, 70]),
+    ([75, 75, 75, 75]),
+    ([80, 80, 90, 70]),
+    ([90, 90, 90, 90]),
+    ([0]),
+    ([90]),
+    ([]),
 ]
 
 max_score = len(test_params)

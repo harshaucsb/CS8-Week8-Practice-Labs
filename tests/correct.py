@@ -235,9 +235,9 @@ if __name__ == "__main__":
     assert username("9876ZyWx%$#@") == "9876zywx____"
     assert username("$#@") == "___"
     assert username('_AbD_') == "_abd_"
-    assert(family_relations("John")) == "John's Family:\n"
-    assert(family_relations("Ted", brother="Tom", mother="Alice")) == "Ted's Family:\nbrother: Tom\nmother: Alice\n"
-    assert(family_relations("Ted", brother="Tom", sister="Sarah", father="Adam", mother="Alice")) == "Ted's Family:\nbrother: Tom\nsister: Sarah\nfather: Adam\nmother: Alice\n"
+    assert family_relations("John") == "John's Family:\n"
+    assert family_relations("Ted", brother="Tom", mother="Alice") == "Ted's Family:\nbrother: Tom\nmother: Alice\n"
+    assert family_relations("Ted", brother="Tom", sister="Sarah", father="Adam", mother="Alice") == "Ted's Family:\nbrother: Tom\nsister: Sarah\nfather: Adam\nmother: Alice\n"
 
     assert calculate_power_sum(base=0.5) == -1
     assert calculate_power_sum(1, 2, 3, 4.5, 5) == -1

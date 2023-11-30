@@ -4,9 +4,9 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ([], -1),
-    (['a', 'b', 'c'], ['c', 'b', 'a']),
-    (['ax', 'by', 'cz', 'df'], ['df', 'cz', 'by', 'ax']),
+    ([]),
+    (['a', 'b', 'c']),
+    (['ax', 'by', 'cz', 'df']),
 ]
 
 max_score = len(test_params)

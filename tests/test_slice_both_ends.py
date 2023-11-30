@@ -4,9 +4,9 @@ from BaseClass import BaseClass
 
 # DONE: create test parameters
 test_params = [
-    ("", -1),
-    ("Tortilla", "rtil"),
-    ("University of California, Santa Barbara", "y of California, San"),
+    (""),
+    ("Tortilla"),
+    ("University of California, Santa Barbara"),
 ]
 
 max_score = len(test_params)

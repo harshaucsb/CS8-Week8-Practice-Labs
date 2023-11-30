@@ -4,9 +4,9 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ("John", "John's Family:\n"),
-    ("Ted", brother="Tom", mother="Alice", "Ted's Family:\nbrother: Tom\nmother: Alice\n"),
-    ("Ted", brother="Tom", sister="Sarah", father="Adam", mother="Alice", "Ted's Family:\nbrother: Tom\nsister: Sarah\nfather: Adam\nmother: Alice\n"),
+    ("John"),
+    ("Ted", "Tom", "Alice"),
+    ("Ted", "Tom", "Sarah", "Adam", "Alice"),
 ]
 
 max_score = len(test_params)
@@ -14,7 +14,7 @@ max_score = len(test_params)
 function_name = "family_relations" # TODO
 
 # TODO:  name the class according to the function name being tested
-class GetDictionaryValue_Test(BaseClass):
+class FamilyRelations_Test(BaseClass):
     @partial_credit(max_score)
     @visibility('visible')
     def test1(self, set_score=None):
