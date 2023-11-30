@@ -1,11 +1,11 @@
 # Instructions
 
 ## Zybooks Chapter Assignment
-- 8.1 - Harshavardhan Miryala <harshavardhan@ucsb.edu>, 
+- 8.1 - Harshavardhan Miryala <harshavardhan@ucsb.edu>,
 - 8.2 - Zekun Li <zekunli@ucsb.edu>,
 - 8.3 - Connor Rapelje <connorrapelje@umail.ucsb.edu>,
-- 8.4 -  Zifeng Zhang <zifengzhang@ucsb.edu>, 
-- 8.5 - Shanxiu He <shanxiuhe@ucsb.edu>,
+- 8.4 - Shanxiu He <shanxiuhe@ucsb.edu>,
+- 8.5 - Zifeng Zhang <zifengzhang@ucsb.edu>,
 - 8.6 - Esha Gupta <eshagupta@ucsb.edu>, 
 - 8.7 - Ethan Meade <ethanmeade@ucsb.edu>, 
 - 8.8 Dictionary methods - Kimia Afshari <kimia_afshari@ucsb.edu>, 
