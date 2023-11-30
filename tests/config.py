@@ -35,6 +35,7 @@ current_fun_names = []
 
 fun_names_dict = {
     "reverse_list": "reverse_list",
+    "calculate_list_statistics": "calculate_list_statistics",
     "replace_string": "replace_string",
     "format_table_row": "format_table_row",
     "slice_both_ends": "slice_both_ends",
@@ -63,6 +64,7 @@ test_files = ['__init__.py', 'requirements.txt', 'run_autograder',
               "test_A_files.py",
               "test_B_fun_names.py",
               "test_reverse_list.py",
+              "test_calculate_list_statistics",
               "test_replace_string.py",
               "test_format_table.py",
               "test_slice_both_ends.py",

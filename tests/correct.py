@@ -27,6 +27,38 @@ def reverse_list(data):
         return data
 
 
+def calculate_list_statistics(numbers):
+    """
+    Calculate and return various statistics for a list of numbers.
+
+    Parameters:
+    numbers (list): A list of numbers (int/float).
+
+    Returns:
+    dict: A dictionary containing the sum, product, average, min, and max of the numbers.
+    """
+
+    if not numbers:
+        return {"sum": 0, "product": 0, "average": None, "min": None, "max": None}
+
+    sum_result = sum(numbers)
+    product_result = 1
+    for num in numbers:
+        product_result *= num
+
+    average_result = sum_result / len(numbers)
+    min_result = min(numbers)
+    max_result = max(numbers)
+
+    return {
+        "sum": sum_result,
+        "product": product_result,
+        "average": average_result,
+        "min": min_result,
+        "max": max_result
+    }
+
+
 def replace_string(data):
     """
     replace_string() takes a string (data) as input.
@@ -150,6 +182,9 @@ if __name__ == "__main__":
     assert reverse_list(['a', 'b', 'c']) == ['c', 'b', 'a']
     assert reverse_list(['ax', 'by', 'cz', 'df']) == ['df', 'cz', 'by', 'ax']
 
+    assert calculate_list_statistics([]) == {"sum": 0, "product": 0, "average": None, "min": None, "max": None}
+    assert calculate_list_statistics([5]) == {"sum": 5, "product": 5, "average": 5.0, "min": 5, "max": 5}
+    assert calculate_list_statistics([-2, -1, 0, 1, 2]) == {"sum": 0, "product": 0, "average": 0.0, "min": -2, "max": 2}
     assert replace_string("I want to TTYL today.") == "I want to talk to you later today."
     assert replace_string("") == -1
     assert replace_string("Invalid string") == "Nothing to replace"
