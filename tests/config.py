@@ -67,6 +67,14 @@ test_files = ['__init__.py', 'requirements.txt', 'run_autograder',
               "test_A_files.py",
               "test_B_fun_names.py",
               "test_reverse_list.py",
+              "test_username.py",
+              "test_family_relations.py",
+              "test_calculate_power_sum.py"
+              "test_calculate_list_statistics",
+              "test_replace_string.py",
+              "test_format_table.py",
+              "test_slice_both_ends.py",
+              "test_determine_class_status.py",
               ]
 # TODO: update the above depending on the names of the test files.
 ################################
