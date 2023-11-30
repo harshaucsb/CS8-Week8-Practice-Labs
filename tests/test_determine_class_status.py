@@ -4,21 +4,25 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ([], -1),
-    (['a', 'b', 'c'], ['c', 'b', 'a']),
-    (['ax', 'by', 'cz', 'df'], ['df', 'cz', 'by', 'ax']),
+    ([0, 90, 80, 70], "Student failed the class"),
+    ([75, 75, 75, 75], "Student failed the class"),
+    ([80, 80, 90, 70],"Student passed the class"),
+    ([90, 90, 90, 90], "Student passed the class with honors"),
+    ([0], "Student failed the class"),
+    ([90], "Student passed the class with honors"),
+    ([],  "Student failed the class"),
 ]
 
 max_score = len(test_params)
 
-function_name = "reverse_list" # TODO
+function_name = "determine_class_status" # TODO
 
 # TODO:  name the class according to the function name being tested
-class ReverseList_Test(BaseClass):
+class DetermineClassStatus_Test(BaseClass):
     @partial_credit(max_score)
     @visibility('visible')
     def test1(self, set_score=None):
-        """reverse_list(data)""" # TODO
+        """determine_class_status(grades)""" # TODO
 
         student_module = self.student_functions
         total_score = max_score
