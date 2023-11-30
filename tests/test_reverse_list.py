@@ -14,7 +14,7 @@ max_score = len(test_params)
 function_name = "reverse_list" # TODO
 
 # TODO:  name the class according to the function name being tested
-class GetDictionaryValue_Test(BaseClass):
+class ReverseList_Test(BaseClass):
     @partial_credit(max_score)
     @visibility('visible')
     def test1(self, set_score=None):

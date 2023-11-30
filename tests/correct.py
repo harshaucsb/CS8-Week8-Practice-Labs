@@ -10,7 +10,7 @@
 
 def reverse_list(data):
     """
-    get_dictionary_value() takes an list (data).
+    reverse_list() takes an list (data).
     The functions check if the list is empty and if yes,
     returns -1. If the list is not empty, the function
     returns the list in reverse order.
