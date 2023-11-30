@@ -4,21 +4,21 @@ from BaseClass import BaseClass
 
 # TODO: create test parameters
 test_params = [
-    ([], -1),
-    (['a', 'b', 'c'], ['c', 'b', 'a']),
-    (['ax', 'by', 'cz', 'df'], ['df', 'cz', 'by', 'ax']),
+    ([]),
+    ([5]),
+    ([-2, -1, 0, 1, 2]),
 ]
 
 max_score = len(test_params)
 
-function_name = "reverse_list" # TODO
+function_name = "calculate_list_statistics" # TODO
 
 # TODO:  name the class according to the function name being tested
-class ReverseList_Test(BaseClass):
+class CalculateListStatistics_Test(BaseClass):
     @partial_credit(max_score)
     @visibility('visible')
     def test1(self, set_score=None):
-        """reverse_list(data)""" # TODO
+        """calculate_list_statistics(list)""" # TODO
 
         student_module = self.student_functions
         total_score = max_score
