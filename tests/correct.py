@@ -203,12 +203,38 @@ def determine_class_status(grades):
         return "Student passed the class with honors"
 
 
+def username(s):
+    """
+    username() takes an string (s).
+    The following program asks user to enter a user name with lower case letter, digits, and underscore only.
+    If the input includes upper case letter, convert them into lower case.
+    If the input has other unexpected characters (that are, not letters or digits or underscore), convert them into underscore.
+    For instance, "9876ZyWx%$#@" returns "9876zywx____".
+    For instance, "$#@" returns "___".
+    Note: Please refer to Zybooks CA 8.4 for more information on incremental development
+    """
+    s = s.lower()
+    res = ""
+    for char in s:
+        if ('0' <= char <= '9') or ('a' <= char <= 'z'):
+            res += char
+        else:
+            res += "_"
+
+    return res    
+
+
+
 if __name__ == "__main__":
     ### Write 3 assert statements
     ### to test the function
     assert reverse_list([]) == -1
     assert reverse_list(['a', 'b', 'c']) == ['c', 'b', 'a']
     assert reverse_list(['ax', 'by', 'cz', 'df']) == ['df', 'cz', 'by', 'ax']
+
+    assert username("9876ZyWx%$#@") == "9876zywx____"
+    assert username("$#@") == "___"
+    assert username('_AbD_') == "_abd_"
     assert(family_relations("John")) == "John's Family:\n"
     assert(family_relations("Ted", brother="Tom", mother="Alice")) == "Ted's Family:\nbrother: Tom\nmother: Alice\n"
     assert(family_relations("Ted", brother="Tom", sister="Sarah", father="Adam", mother="Alice")) == "Ted's Family:\nbrother: Tom\nsister: Sarah\nfather: Adam\nmother: Alice\n"
