@@ -3,22 +3,35 @@ from gradescope_utils.autograder_utils.decorators import visibility, partial_cre
 from BaseClass import BaseClass
 
 # TODO: create test parameters
+data_row = {'Name': 'Alice', 'Age': '25', 'Country': 'USA'}
 test_params = [
-    ([], -1),
-    (['a', 'b', 'c'], ['c', 'b', 'a']),
-    (['ax', 'by', 'cz', 'df'], ['df', 'cz', 'by', 'ax']),
+    (data_row, {
+    'Name': {'width': 10, 'alignment': 'left', 'fill_char': '-'},
+    'Age': {'width': 4, 'alignment': 'center', 'fill_char': '*'},
+    'Country': {'width': 15, 'alignment': 'center', 'fill_char': '='}
+}),
+    (data_row, {
+    'Name': {'width': 10, 'alignment': 'left', 'fill_char': '=='},
+    'Age': {'width': 5, 'alignment': 'center', 'fill_char': '*'},
+    'Country': {'width': 15, 'alignment': 'right', 'fill_char': '='}
+}),
+    (data_row, {
+    'Name': {'width': 10, 'alignment': 'leftwards', 'fill_char': '-'},
+    'Age': {'width': 5, 'alignment': 'center', 'fill_char': '*'},
+    'Country': {'width': 15, 'alignment': 'right', 'fill_char': '='}
+})
 ]
 
 max_score = len(test_params)
 
-function_name = "reverse_list" # TODO
+function_name = "format_table_row" # TODO
 
 # TODO:  name the class according to the function name being tested
-class ReverseList_Test(BaseClass):
+class FormatTableRow_Test(BaseClass):
     @partial_credit(max_score)
     @visibility('visible')
     def test1(self, set_score=None):
-        """reverse_list(data)""" # TODO
+        """format_table_row(data_row, column_formats)""" # TODO
 
         student_module = self.student_functions
         total_score = max_score
