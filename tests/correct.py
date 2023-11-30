@@ -10,7 +10,7 @@
 
 def reverse_list(data):
     """
-    get_dictionary_value() takes an list (data).
+    reverse_list() takes an list (data).
     The functions check if the list is empty and if yes,
     returns -1. If the list is not empty, the function
     returns the list in reverse order.
@@ -25,7 +25,6 @@ def reverse_list(data):
         for i in range(len(data) // 2):
             data[i], data[len(data) - i - 1] = data[len(data) - i - 1], data[i]
         return data
-
 
 def format_table_row(data_row, column_formats):
     """
@@ -73,6 +72,56 @@ def format_table_row(data_row, column_formats):
 
     return ''.join(formatted_row)
 
+def slice_both_ends(word): # Based off of 8.7
+    """
+    slice_both_ends() takes a string.
+    The function checks if the string is empty and if yes,
+    returns -1. If the string is not empty, the function
+    returns a slice of the string with the first and last quarter
+    of the string removed.
+    For example: If the string is 'Tortilla' then the function returns
+    'rtil'. 
+    """
+    # STUB
+    if len(word) == 0:
+        return -1
+    return word[int(len(word)/4):int(3*len(word)/4)]
+
+def determine_class_status(grades):
+    '''
+    determine_class_status() takes a list (grades).
+    The list contains four numeric that represent the quiz grades of a student.
+    If any of the quiz grades is 0, the student fails the class and the function should return "Student failed the class"
+    If there are no values in the grade list, the function should return "Student failed the class"
+    If the average of all the quiz grades rounded to the nearest integer is <= 75, the student fails the class
+    and the function should return "Student failed the class"
+    If the average of all the quiz grades rounded to the second decimal place is greater than 75 and less than 90
+    the function should return "Student passed the class"
+    If the average of all the quiz grades rounded to the second decimal place is greater than or equal to 90,
+    the function should return "Student passed the class with honors"
+    You can assume all quiz grades will between 0 and 100 inclusive.
+    :param grades: list of quiz grades
+    :return: string of student's class status
+    '''
+    if len(grades) == 0:
+        return "Student failed the class"
+
+    total = 0
+    for grade in grades:
+        total += grade
+        if grade == 0:
+            return "Student failed the class"
+    total = round(total / len(grades))
+
+    if total <= 75:
+        return "Student failed the class"
+
+    if 75 < total < 90:
+        return "Student passed the class"
+
+    if total >= 90:
+        return "Student passed the class with honors"
+
 
 if __name__ == "__main__":
     ### Write 3 assert statements
@@ -117,3 +166,18 @@ if __name__ == "__main__":
     expected_output = 'Alice-----*25*======USA======'
     assert format_table_row(data_row, column_formats) == expected_output, \
         "Assertion failed: The function should return the correctly formatted string."
+    
+    # Test slice_both_ends()
+    assert slice_both_ends("") == -1
+    assert slice_both_ends("Tortilla") == "rtil"
+    assert slice_both_ends("Pomegranate") == "megran"
+    assert slice_both_ends("cat") == "ca"
+    assert determine_class_status([0, 90, 80, 70]) == "Student failed the class"
+    assert determine_class_status([75, 75, 75, 75]) == "Student failed the class"
+    assert determine_class_status([80, 80, 90, 70]) == "Student passed the class"
+    assert determine_class_status([90, 90, 90, 90]) == "Student passed the class with honors"
+    assert determine_class_status([0]) == "Student failed the class"
+    assert determine_class_status([90]) == "Student passed the class with honors"
+    assert determine_class_status([]) == "Student failed the class"
+
+    print('all asserts passed!')
