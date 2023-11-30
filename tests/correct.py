@@ -1,13 +1,3 @@
-## Given the stubs for the following function 
-## and the main program, complete the implementation.
-## Finish the assert statements to properly
-## assert the result shown below (be careful 
-## with the types of the variables).
-
-## Make sure that your asserts test
-## different branches/cases.
-
-
 def reverse_list(data):
     """
     reverse_list() takes an list (data).
@@ -25,6 +15,23 @@ def reverse_list(data):
         for i in range(len(data) // 2):
             data[i], data[len(data) - i - 1] = data[len(data) - i - 1], data[i]
         return data
+        
+def family_relations(name, **relations):
+    """
+    family_relations takes a person's name as a string (name) and their family relations
+    and a variable amount of keyword arguments as a dictionary (**relations)
+    and returns a string containing all of the family relations of the person whose name and
+    family relations are passed into the function, separated by a newline.  For example: If the function is called with just a name,
+    family_relations("John") it returns the string "John's Family:\n".  If the function is called with more arguments for more family members
+    like family_relations("Ted", brother="Tom", mother="Alice"), it returns the string "Ted's Family:\nbrother: Tom\nmother: Alice\n".
+    Make sure to have different assert statements to test the function than the ones provided above and test it with variable amounts of arguments,
+    including testing it with no extra arguments and just the name being passed in.  Note: Please refer to Zybooks section 8.3 for more information on lists
+    with an arbitrary amount of arguments.
+    """
+    family_tree = name + "'s Family:\n"
+    for relation, member in relations.items():
+        family_tree += f"{relation}: {member}\n"
+    return family_tree
 
       
 def calculate_power_sum(base, exp1=1, exp2=2, exp3=3, exp4=4):
@@ -202,6 +209,9 @@ if __name__ == "__main__":
     assert reverse_list([]) == -1
     assert reverse_list(['a', 'b', 'c']) == ['c', 'b', 'a']
     assert reverse_list(['ax', 'by', 'cz', 'df']) == ['df', 'cz', 'by', 'ax']
+    assert(family_relations("John")) == "John's Family:\n"
+    assert(family_relations("Ted", brother="Tom", mother="Alice")) == "Ted's Family:\nbrother: Tom\nmother: Alice\n"
+    assert(family_relations("Ted", brother="Tom", sister="Sarah", father="Adam", mother="Alice")) == "Ted's Family:\nbrother: Tom\nsister: Sarah\nfather: Adam\nmother: Alice\n"
 
     assert calculate_power_sum(base=0.5) == -1
     assert calculate_power_sum(1, 2, 3, 4.5, 5) == -1
