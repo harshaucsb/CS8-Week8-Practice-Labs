@@ -26,9 +26,57 @@ def reverse_list(data):
             data[i], data[len(data)-i-1] = data[len(data)-i-1], data[i]
         return data
 
+def determine_class_status(grades):
+    '''
+    determine_class_status() takes a list (grades).
+    The list contains four numeric that represent the quiz grades of a student.
+    If any of the quiz grades is 0, the student fails the class and the function should return "Student failed the class"
+    If there are no values in the grade list, the function should return "Student failed the class"
+    If the average of all the quiz grades rounded to the nearest integer is <= 75, the student fails the class
+    and the function should return "Student failed the class"
+    If the average of all the quiz grades rounded to the second decimal place is greater than 75 and less than 90
+    the function should return "Student passed the class"
+    If the average of all the quiz grades rounded to the second decimal place is greater than or equal to 90,
+    the function should return "Student passed the class with honors"
+    You can assume all quiz grades will between 0 and 100 inclusive.
+    :param grades: list of quiz grades
+    :return: string of student's class status
+    '''
+    if len(grades) == 0:
+        return "Student failed the class"
+
+    total = 0
+    for grade in grades:
+        total += grade
+        if grade == 0:
+            return "Student failed the class"
+    total = round(total / len(grades))
+
+    if total <= 75:
+        return "Student failed the class"
+
+    if 75 < total < 90:
+        return "Student passed the class"
+
+    if total >= 90:
+        return "Student passed the class with honors"
+
+
+
+
 if __name__ == "__main__":
     ### Write 3 assert statements
     ### to test the function
     assert reverse_list([]) == -1
     assert reverse_list(['a', 'b', 'c']) == ['c', 'b', 'a']
     assert reverse_list(['ax', 'by', 'cz', 'df']) == ['df', 'cz', 'by', 'ax']
+
+    assert determine_class_status([0, 90, 80, 70]) == "Student failed the class"
+    assert determine_class_status([75, 75, 75, 75]) == "Student failed the class"
+    assert determine_class_status([80, 80, 90, 70]) == "Student passed the class"
+    assert determine_class_status([90, 90, 90, 90]) == "Student passed the class with honors"
+    assert determine_class_status([0]) == "Student failed the class"
+    assert determine_class_status([90]) == "Student passed the class with honors"
+    assert determine_class_status([]) == "Student failed the class"
+
+    print('all asserts passed!')
