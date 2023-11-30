@@ -36,6 +36,7 @@ current_fun_names = []
 fun_names_dict = {
     "reverse_list": "reverse_list",
     "slice_both_ends": "slice_both_ends",
+    "determine_class_status": "determine_class_status",
 }
 
 required_files = ['main.py', 'functions.py', 'tests.py'] # TODO: add ALL required files
@@ -61,6 +62,7 @@ test_files = ['__init__.py', 'requirements.txt', 'run_autograder',
               "test_B_fun_names.py",
               "test_reverse_list.py",
               "test_slice_both_ends.py",
+              "test_determine_class_status.py",
               ]
 # TODO: update the above depending on the names of the test files.
 ################################
