@@ -36,6 +36,13 @@ current_fun_names = []
 fun_names_dict = {
     "reverse_list": "reverse_list",
     "username": "username",
+    "family_relations": "family_relations",
+    "calculate_power_sum": "calculate_power_sum"
+    "calculate_list_statistics": "calculate_list_statistics",
+    "replace_string": "replace_string",
+    "format_table_row": "format_table_row",
+    "slice_both_ends": "slice_both_ends",
+    "determine_class_status": "determine_class_status",
 }
 
 required_files = ['main.py', 'functions.py', 'tests.py'] # TODO: add ALL required files
@@ -61,6 +68,13 @@ test_files = ['__init__.py', 'requirements.txt', 'run_autograder',
               "test_B_fun_names.py",
               "test_reverse_list.py",
               "test_username.py",
+              "test_family_relations.py",
+              "test_calculate_power_sum.py"
+              "test_calculate_list_statistics",
+              "test_replace_string.py",
+              "test_format_table.py",
+              "test_slice_both_ends.py",
+              "test_determine_class_status.py",
               ]
 # TODO: update the above depending on the names of the test files.
 ################################
