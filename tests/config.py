@@ -43,6 +43,7 @@ fun_names_dict = {
     "format_table_row": "format_table_row",
     "slice_both_ends": "slice_both_ends",
     "determine_class_status": "determine_class_status",
+    "extract_domain": "extract_domain"
 }
 
 required_files = ['main.py', 'functions.py', 'tests.py'] # TODO: add ALL required files
@@ -75,6 +76,7 @@ test_files = ['__init__.py', 'requirements.txt', 'run_autograder',
               "test_format_table.py",
               "test_slice_both_ends.py",
               "test_determine_class_status.py",
+              "test_extract_domain.py"
               ]
 # TODO: update the above depending on the names of the test files.
 ################################
